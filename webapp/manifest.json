@@ -1,0 +1,45 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+	  "id": "sap.grc.aud.launchpad",
+	  "type": "application",
+	  "i18n": "i18n/i18n.properties",
+	  "applicationVersion": {
+		"version": "0.0.1"
+	  },
+	  "title": "{{appTitle}}",
+	  "description": "{{appDescription}}",
+	  "resources": "resources.json"
+	},
+	"sap.ui": {
+	  "technology": "UI5",
+	  "icons": {
+		"icon": "",
+		"favIcon": "",
+		"phone": "",
+		"phone@2": "",
+		"tablet": "",
+		"tablet@2": ""
+	  },
+	  "deviceTypes": {
+		"desktop": true,
+		"tablet": true,
+		"phone": true
+	  }
+	},
+	"sap.ui5": {
+	  "flexEnabled": true,
+	  "dependencies": {
+		"minUI5Version": "1.60.0",
+		"libs": {
+		  "sap.m": {},
+		  "sap.ui.core": {}
+		}
+	  },
+	  "contentDensities": {
+		"compact": true,
+		"cozy": true
+	  }
+	}
+  }
+  

@@ -1,0 +1,371 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "zaud.audit.initiate.custmf",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "GRC-AUD",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [
+			"F3713"
+		],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {
+					"lazy": true
+				},
+				"sap.grc.acs.aud.finding": {
+					"minVersion": "2.7.0",
+					"lazy": false
+				},
+				"sap.grc.acs.lib": {
+					"minVersion": "2.7.0",
+					"lazy": true
+				},
+				"sap.grc.acs.aud.action": {
+					"minVersion": "2.7.0",
+					"lazy": true
+				},
+				"sap.grc.acs.aud.audit": {
+					"minVersion": "3.1.0-SNAPSHOT",
+					"lazy": false
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18nm": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.grc.acs.aud.audit.initiate.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.grc.acs.aud.audit.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"notFound"
+					]
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "worklist",
+					"target": [
+						"worklist"
+					]
+				},
+				{
+					"pattern": "{intentService}/{objectId}:?query:",
+					"name": "object",
+					"target": [
+						"object"
+					]
+				},
+				{
+					"pattern": "NewAudit",
+					"name": "create",
+					"target": [
+						"create"
+					]
+				},
+				{
+					"pattern": "{intentService}/{objectId}:?query:",
+					"name": "objectNav",
+					"target": [
+						"objectNav"
+					]
+				},
+				{
+					"pattern": "{intentService}/{objectId}/AuditorCalendar",
+					"name": "AuditorCal",
+					"target": [
+						"AuditorCal"
+					]
+				}
+			],
+			"targets": {
+				"worklist": {
+					"viewName": "Worklist",
+					"viewId": "worklist",
+					"viewLevel": 1
+				},
+				"object": {
+					"viewName": "Object",
+					"viewId": "object",
+					"viewLevel": 2
+				},
+				"create": {
+					"viewName": "Create",
+					"viewId": "create",
+					"viewLevel": 2
+				},
+				"objectNav": {
+					"viewName": "Object",
+					"viewId": "object"
+				},
+				"objectNotFound": {
+					"viewName": "ObjectNotFound",
+					"viewId": "objectNotFound"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
+				},
+				"AuditorCal":{
+					"viewName":"AuditorCalendar",
+					"viewId":"AuditorCal",
+					"viewLevel": 2
+				}
+			}
+		},
+		"config": {
+
+			"intents": {
+				"AuditEngagement-initiate": {
+					"service": "GRCAUD_CV_InitiateAudit",
+					"type": "GRCAUD_CV_InitiateAuditType",
+					"appTitle": "appTitleInitiate",
+					"tablePersistencyKey": "InitiateAuditsTablePersKey",
+					"filterBarPersistencyKey": "InitiateAuditsFilterBarPersKey",
+					"worklistFilterconfig": {
+						"bDisplayFilterFields": false,
+						"bDisplayStatusFilterOnly": false
+					},
+					"sectionConfig": {
+						"workProgramSection": {
+							"visible": true
+						},
+						"workingPaperSection": {
+							"visible": true
+						},
+						"findingSection": {
+							"visible": false
+						},
+						"reportSection": {
+							"visible": false
+						},
+						"activitySection": {
+							"visible": true
+						}
+					},
+					"worklistSorter": {
+						"orderBy": "PlannedStartDate",
+						"isDescending": false
+					},
+					"createAudit": true,
+					"scopeIntent": {
+						"semanticObject": "AuditWorkPackage",
+						"action": "initiate"
+					},
+					"workingPaperIntent": {
+						"semanticObject": "DocumentWorkingPaper",
+						"action": "initiate"
+					},
+					"intent": "AuditEngagement-initiate",
+					"standardFieldStatus": {
+						"ActualCost": {
+							"visible": false,
+							"editable": false,
+							"mandatory": false,
+							"IgnoreAnnotation": true
+						},
+						"ActualEffort": {
+							"visible": false,
+							"editable": false,
+							"mandatory": false,
+							"IgnoreAnnotation": true
+						},
+						"ActualStartDate": {
+							"visible": false,
+							"editable": false,
+							"mandatory": false,
+							"IgnoreAnnotation": true
+						},
+						"Category": {
+							"visible": true,
+							"editable": true,
+							"mandatory": true
+						},
+						"AuditGroup": {
+							"visible": true,
+							"editable": true,
+							"mandatory": true
+						}
+					}
+				}
+			},
+			"menuItemConfig": {
+				"AuditEngagement-initiate": {
+					"Scenario": "AuditEngagement-initiate",
+					"Section": {
+						"HEADER": "header",
+						"INFO": "generalSection",
+						"DIM": "dimensionSection",
+						"ADTBL": "adtblSection",
+						"RISK": "riskSection",
+						"TEAM": "userRoleSection",
+						"WPA": "workingPaperSection",
+						"ORG": "organizationSection"
+					},
+					"Group": {},
+					"Button": {
+						"DOCWPA-UPLOA_FILE": {
+							"icon": "sap-icon://add"
+						},
+						"DOCWPA-DOWNLOAD_WPAZIP": {
+							"icon": "sap-icon://download"
+						},
+						"USROL-UPDATE_USROL": {
+							"text": "",
+							"relatedButtons": [
+								{
+									"icon": "",
+									"buttonId": "btnSaveUserRole",
+									"textId": "btnSave",
+									"tooltipId": "tolSave",
+									"visible": false,
+									"pressHandler": "onSaveBtnPress"
+								},
+								{
+									"icon": "",
+									"buttonId": "btnCancelSaveUserRole",
+									"textId": "btnCancel",
+									"tooltipId": "tolCancel",
+									"visible": false,
+									"pressHandler": "onCancelBtnPress"
+								}
+							]
+						},
+						"AUDIT-CRE_DIM_TO_AUDIT_ASMNT": {
+							"icon": "sap-icon://add" 
+						},
+						"AUDIT-CRE_RISK_TO_AUDIT_ASMNT": {
+							"icon": "sap-icon://add" 
+						},
+						"AUDIT-CRE_ADTBL_TO_AUDIT_ASMNT": {
+							"icon": "sap-icon://add" 
+						},
+						"AUDIT-CRE_ORG_TO_AUDIT_ASMNT": {
+							"icon": "sap-icon://add" 
+						}
+					},
+					"SmartForm": {
+						"section": "INFO",
+						"editableActionName": "UPDATE_ROOT"
+					}
+				}
+			},
+			"fieldExtensibility": {
+				"standardFieldStatus":{
+					"Company": {
+						"visible": true,
+						"editable": true,
+						"mandatory": false
+					},
+					"Country": {
+						"visible": true,
+						"editable": true,
+						"mandatory": false
+					},
+					"PlannedStartDate": {
+						"visible": true,
+						"editable": true,
+						"mandatory": true
+					},
+					"Title": {
+						"visible": true,
+						"editable": true,
+						"mandatory": true
+					},
+					"Scope": {
+						"visible": true,
+						"editable": true,
+						"mandatory": false
+					},
+					"Tag": {
+						"visible": true,
+						"editable": true,
+						"mandatory": false
+					},
+					"EstimatedEffort": {
+						"visible": true,
+						"editable": true,
+						"mandatory": false
+					},
+					"Type": {
+						"visible": true,
+						"editable": true,
+						"mandatory": true
+					},
+					"OrderNumber": {
+						"editable": true,
+						"mandatory": false
+					}
+				}
+			},
+			"worklistConfig": {
+				"resizedTable": false
+			}
+		}
+	}
+}

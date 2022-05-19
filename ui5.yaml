@@ -1,0 +1,39 @@
+specVersion: "2.6"
+metadata:
+  name: acs.aud.ext
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: webapp
+framework:
+  name: SAPUI5
+  version: 1.98.0
+  libraries:
+    - name: sap.ui.core
+    - name: sap.m
+    - name: sap.ui.layout
+    - name: themelib_sap_fiori_3
+    - name: sap.ushell
+    - name: sap.uxap
+    - name: sap.ovp
+server:
+  customMiddleware:
+    - name: ui5-middleware-simpleproxy
+      mountPath: /sap
+      afterMiddleware: compression
+      configuration:
+        strictSSL: false
+        debug: true
+    - name: ui5-middleware-servestatic
+      afterMiddleware: compression
+      mountPath: /sap/bc/ui5_ui5/sap/ZGRCAUD_EXTINIT/i18n
+      configuration:
+        rootPath: "ext-apps/zaud.audit.initiate.cust/webapp/i18n"
+        debug: true
+    - name: ui5-middleware-servestatic
+      afterMiddleware: compression
+      mountPath: /ext-resources
+      configuration:
+        rootPath: "ext-apps"
+        debug: true

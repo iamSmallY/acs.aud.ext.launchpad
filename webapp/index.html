@@ -1,0 +1,960 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>acs.aud.audit.initiate</title>
+		
+		<script>
+			window["sap-ushell-config"] = {
+				defaultRenderer : "fiori2",
+				renderers: {
+					fiori2: {
+						componentData: {
+							config: {
+								search: "hidden"
+							}
+						}
+					}
+				},
+				applications: {
+					"Action-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-display"
+					},
+					"Action-displayActionByMyFinding": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayActionByMyFinding"
+					},
+					"Action-displayAuditFollowUp": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayAuditFollowUp"
+					},
+					"Action-displayEscalationOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayEscalationOVP"
+					},
+					"Action-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayHistorical"
+					},
+					"Action-displayInProcessOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayInProcessOVP"
+					},
+					"Action-displayOverview": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-displayOverview"
+					},
+					"Action-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-execute"
+					},
+					"Action-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-my"
+					},
+					"Action-myAction": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.my",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_myact/",
+						description: "Action",
+						title: "Action-myAction"
+					},
+					"Action-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-track"
+					},
+					"Action-trackActionByMyFinding": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.trackopen",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_acttrck/",
+						description: "Action",
+						title: "Action-trackActionByMyFinding"
+					},
+					"Action-trackAuditFollowUp": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.trackopen",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_acttrck/",
+						description: "Action",
+						title: "Action-trackAuditFollowUp"
+					},
+					"Action-trackAuditFollowUpOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-trackAuditFollowUpOVP"
+					},
+					"Action-updateActionByMyFinding": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.trackopen",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_acttrck/",
+						description: "Action",
+						title: "Action-updateActionByMyFinding"
+					},
+					"Action-updateAuditFollowUp": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_actdisp/",
+						description: "Action",
+						title: "Action-updateAuditFollowUp"
+					},
+					"AuditableItem-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditableitem.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_adtbdisp/",
+						description: "AuditableItem",
+						title: "AuditableItem-display"
+					},
+					"AuditableItem-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditableitem.manage",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_adtblmng/",
+						description: "AuditableItem",
+						title: "AuditableItem-manage"
+					},
+					"AuditDimension-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.dimension",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dim/",
+						description: "AuditDimension",
+						title: "AuditDimension-display"
+					},
+					"AuditDimension-displayVersion": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.dimension",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dim/",
+						description: "AuditDimension",
+						title: "AuditDimension-displayVersion"
+					},
+					"AuditDimension-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.dimension",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dim/",
+						description: "AuditDimension",
+						title: "AuditDimension-manage"
+					},
+					"AuditDimensionSearch-displayFactSheet": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.dimension",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dim/",
+						description: "AuditDimensionSearch",
+						title: "AuditDimensionSearch-displayFactSheet"
+					}, 
+					"AuditEngagement-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.approvepreparation",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audaprp/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-approvePreparation"
+					},
+					"AuditEngagement-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.approvereport",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audaprep/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-approveReport"
+					},
+					"AuditEngagement-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.displayhistorical",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audhist/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-display"
+					},
+					"AuditEngagement-displayDistributedOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.displayhistorical",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audhist/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-displayDistributedOVP"
+					},
+					"AuditEngagement-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.displayhistorical",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audhist/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-displayHistorical"
+					},
+					"AuditEngagement-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audexe/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-execute"
+					},
+					"AuditEngagement-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.prepare",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audpre/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-prepare"
+					},
+					"AuditEngagement-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audexe/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-review"
+					},
+					"AuditEngagement-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.track",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audtrk/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-track"
+					},
+					"AuditEngagement-trackOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.displayhistorical",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audhist/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-trackOVP"
+					},
+					"AuditOrganization-displayFactSheet": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.org",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_org/",
+						description: "AuditOrganization",
+						title: "AuditOrganization-displayFactSheet"
+					},
+					"AuditOrganization-displayVersion": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.org",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_org/",
+						description: "AuditOrganization",
+						title: "AuditOrganization-displayVersion"
+					},
+					"AuditOrganization-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.org",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_org/",
+						description: "AuditOrganization",
+						title: "AuditOrganization-manage"
+					},
+					"AuditorProfile-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.profile",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_profile/",
+						description: "AuditorProfile",
+						title: "AuditorProfile-display"
+					},
+					"AuditorProfile-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.profile",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_profile/",
+						description: "AuditorProfile",
+						title: "AuditorProfile-my"
+					},
+					"AuditOverviewPage-displayManagement": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.movp",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_movp/",
+						description: "AuditOverviewPage",
+						title: "AuditOverviewPage-displayManagement"
+					},
+					"AuditPlan-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audplan/",
+						description: "AuditPlan",
+						title: "AuditPlan-display"
+					},
+					"AuditPlan-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audplan/",
+						description: "AuditPlan",
+						title: "AuditPlan-manage"
+					},
+					"AuditResource-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.resource.manage",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_resource/",
+						description: "AuditResource",
+						title: "AuditResource-manage"
+					},
+					"AuditWorkPackage-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-approvePreparation"
+					},
+					"AuditWorkPackage-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-approveReport"
+					},
+					"AuditWorkPackage-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-display"
+					},
+					"AuditWorkPackage-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-displayHistorical"
+					},
+					"AuditWorkPackage-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-execute"
+					},
+					"AuditWorkPackage-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-my"
+					},
+					"AuditWorkPackage-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-prepare"
+					},
+					"AuditWorkPackage-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-review"
+					},
+					"AuditWorkPackage-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.scope",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_scope/",
+						description: "AuditWorkPackage",
+						title: "AuditWorkPackage-track"
+					},
+					"BusinessUser-recordAuditTime": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.timerecording",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_timerec/",
+						description: "BusinessUser",
+						title: "BusinessUser-recordAuditTime"
+					},
+					"CCMProcedure-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-approvePreparation"
+					},
+					"CCMProcedure-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-approveReport"
+					},
+					"CCMProcedure-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-create"
+					},
+					"CCMProcedure-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-display"
+					},
+					"CCMProcedure-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-displayHistorical"
+					},
+					"CCMProcedure-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-execute"
+					},
+					"CCMProcedure-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-my"
+					},
+					"CCMProcedure-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-prepare"
+					},
+					"CCMProcedure-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-review"
+					},
+					"CCMProcedure-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.ccm",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctask/",
+						description: "CCMProcedure",
+						title: "CCMProcedure-track"
+					},
+					"DetectionProcedure-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-approvePreparation"
+					},
+					"DetectionProcedure-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-approveReport"
+					},
+					"DetectionProcedure-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-create"
+					},
+					"DetectionProcedure-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-display"
+					},
+					"DetectionProcedure-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-displayHistorical"
+					},
+					"DetectionProcedure-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-execute"
+					},
+					"DetectionProcedure-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-my"
+					},
+					"DetectionProcedure-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-prepare"
+					},
+					"DetectionProcedure-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-review"
+					},
+					"DetectionProcedure-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.detection",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_dtask/",
+						description: "DetectionProcedure",
+						title: "DetectionProcedure-track"
+					},
+					"DetectionWorkingPaper-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-approvePreparation"
+					},
+					"DetectionWorkingPaper-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-approveReport"
+					},
+					"DetectionWorkingPaper-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-display"
+					},
+					"DetectionWorkingPaper-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-displayHistorical"
+					},
+					"DetectionWorkingPaper-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-execute"
+					},
+					"DetectionWorkingPaper-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-prepare"
+					},
+					"DetectionWorkingPaper-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-review"
+					},
+					"DetectionWorkingPaper-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.detworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_detwpa/",
+						description: "DetectionWorkingPaper",
+						title: "DetectionWorkingPaper-track"
+					},
+					"DocumentWorkingPaper-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-approvePreparation"
+					},
+					"DocumentWorkingPaper-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-approveReport"
+					},
+					"DocumentWorkingPaper-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-display"
+					},
+					"DocumentWorkingPaper-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-displayHistorical"
+					},
+					"DocumentWorkingPaper-edit": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-edit"
+					},
+					"DocumentWorkingPaper-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-execute"
+					},
+					"DocumentWorkingPaper-initiate": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-initiate"
+					},
+					"DocumentWorkingPaper-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-my"
+					},
+					"DocumentWorkingPaper-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-prepare"
+					},
+					"DocumentWorkingPaper-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-review"
+					},
+					"DocumentWorkingPaper-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.docworkpaper",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_docwkppr/",
+						description: "DocumentWorkingPaper",
+						title: "DocumentWorkingPaper-track"
+					},
+					"Finding-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_findexe/",
+						description: "Finding",
+						title: "Finding-create"
+					},
+					"Finding-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_finddisp/",
+						description: "Finding",
+						title: "Finding-display"
+					},
+					"Finding-displayAuditFollowUp": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_finddisp/",
+						description: "Finding",
+						title: "Finding-displayAuditFollowUp"
+					},
+					"Finding-displayFindingByMyAction": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_finddisp/",
+						description: "Finding",
+						title: "Finding-displayFindingByMyAction"
+					},
+					"Finding-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_finddisp/",
+						description: "Finding",
+						title: "Finding-displayHistorical"
+					},
+					"Finding-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_findexe/",
+						description: "Finding",
+						title: "Finding-execute"
+					},
+					"Finding-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.my",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_myfind/",
+						description: "Finding",
+						title: "Finding-my"
+					},
+					"Finding-myFinding": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.my",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_myfind/",
+						description: "Finding",
+						title: "Finding-myFinding"
+					},
+					"Finding-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_findexe/",
+						description: "Finding",
+						title: "Finding-review"
+					},
+					"Finding-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.execute",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_findexe/",
+						description: "Finding",
+						title: "Finding-track"
+					},
+					"Finding-trackAuditFollowUp": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.trackopen",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_findtrck/",
+						description: "Finding",
+						title: "Finding-trackAuditFollowUp"
+					},
+					"Finding-trackAuditFollowUpOVP": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_finddisp/",
+						description: "Finding",
+						title: "Finding-trackAuditFollowUpOVP"
+					},
+					"InternalControl-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.control",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctrl/",
+						description: "InternalControl",
+						title: "InternalControl-display"
+					},
+					"InternalControl-displayVersion": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.control",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctrl/",
+						description: "InternalControl",
+						title: "InternalControl-displayVersion"
+					},
+					"InternalControl-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.control",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_ctrl/",
+						description: "InternalControl",
+						title: "InternalControl-manage"
+					},
+					"QuestionProcedure-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-approvePreparation"
+					},
+					"QuestionProcedure-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-approveReport"
+					},
+					"QuestionProcedure-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-create"
+					},
+					"QuestionProcedure-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-display"
+					},
+					"QuestionProcedure-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-displayHistorical"
+					},
+					"QuestionProcedure-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-execute"
+					},
+					"QuestionProcedure-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-my"
+					},
+					"QuestionProcedure-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-prepare"
+					},
+					"QuestionProcedure-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-review"
+					},
+					"QuestionProcedure-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.question",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_qtask/",
+						description: "QuestionProcedure",
+						title: "QuestionProcedure-track"
+					},
+					"Risk-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.risk.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_riskdisp/",
+						description: "Risk",
+						title: "Risk-display"
+					},
+					"Risk-displayVersion": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.risk.display",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_riskdisp/",
+						description: "Risk",
+						title: "Risk-displayVersion"
+					},
+					"Risk-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.riskregister",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_riskmng/",
+						description: "Risk",
+						title: "Risk-manage"
+					},
+					"TestProcedure-approvePreparation": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-approvePreparation"
+					},
+					"TestProcedure-approveReport": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-approveReport"
+					},
+					"TestProcedure-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-create"
+					},
+					"TestProcedure-display": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-display"
+					},
+					"TestProcedure-displayHistorical": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-displayHistorical"
+					},
+					"TestProcedure-execute": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-execute"
+					},
+					"TestProcedure-my": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-my"
+					},
+					"TestProcedure-prepare": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-prepare"
+					},
+					"TestProcedure-review": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-review"
+					},
+					"TestProcedure-track": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.procedure.test",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_mtask/",
+						description: "TestProcedure",
+						title: "TestProcedure-track"
+					},
+					"AuditEngagement-initiate": {
+						additionalInformation: "SAPUI5.Component=zaud.audit.initiate.cust",
+						applicationType: "URL",
+						url: "/ext-resources/zaud.audit.initiate.cust/webapp/",
+						description: "AuditEngagement",
+						title: "Initiate Audits - Customized"
+					}
+				}
+			};
+		</script>
+
+		<script src="../../test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{
+				"sap.grc.acs.lib": "/sap/bc/ui5_ui5/sap/acs_lib/",
+				"sap.grc.acs.aud.action": "/sap/bc/ui5_ui5/sap/grcaud_action/",
+				"sap.grc.acs.aud.audit": "/sap/bc/ui5_ui5/sap/grcaud_audit/",
+				"sap.grc.acs.aud.auditableitem": "/sap/bc/ui5_ui5/sap/grcaud_adtbl/",
+				"sap.grc.acs.aud.finding": "/sap/bc/ui5_ui5/sap/grcaud_finding/",
+				"sap.grc.acs.aud.risk": "/sap/bc/ui5_ui5/sap/grcaud_risk/"
+				}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				// initialize the ushell sandbox component
+				sap.ushell.Container.createRenderer().placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

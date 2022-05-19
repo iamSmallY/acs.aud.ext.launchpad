@@ -1,0 +1,20 @@
+{
+	"name": "sap.grc.aud.launchpad",
+	"version": "1.0.0",
+	"description": "Audit Management fiori launchpad for dev",
+	"private": true,
+	"scripts": {
+		"start": "ui5 serve --config ui5.yaml --port 1080 --open index.html"
+	},
+	"devDependencies": {
+		"@ui5/cli": "^2.14.6",
+		"ui5-middleware-servestatic": "^0.3.9",
+		"ui5-middleware-simpleproxy": "^0.8.0"
+	},
+	"ui5": {
+		"dependencies": [
+			"ui5-middleware-simpleproxy",
+			"ui5-middleware-servestatic"
+		]
+	}
+}

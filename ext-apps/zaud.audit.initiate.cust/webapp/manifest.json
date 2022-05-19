@@ -1,0 +1,81 @@
+{
+	"_version": "1.11.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "zaud.audit.initiate.cust",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "GRC-AUD",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [
+			"F3713"
+		],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {
+					"lazy": true
+				},
+				"sap.grc.acs.aud.finding": {
+					"minVersion": "2.7.0",
+					"lazy": false
+				},
+				"sap.grc.acs.lib": {
+					"minVersion": "2.7.0",
+					"lazy": true
+				},
+				"sap.grc.acs.aud.action": {
+					"minVersion": "2.7.0",
+					"lazy": true
+				},
+				"sap.grc.acs.aud.audit": {
+					"minVersion": "3.1.0-SNAPSHOT",
+					"lazy": false
+				}			
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	}
+}

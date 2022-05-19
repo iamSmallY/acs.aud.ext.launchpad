@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+	xmlns:smartform="sap.ui.comp.smartform" xmlns:richtexteditor="sap.ui.richtexteditor" xmlns:layout="sap.ui.layout"
+	controllerName="sap.grc.acs.aud.audit.block.controller.AuditScope" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:extension="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<smartform:SmartForm id="smartForm" useHorizontalLayout="false" editable="{= (!${auditScopeView>/bFormDisplay}) &amp;&amp; ${extensionModel>/Scope/editable} }">
+		<smartform:layout>
+			<smartform:Layout id="smartformLayout" labelSpanS="12" labelSpanM="12" labelSpanL="12" labelSpanXL="12" columnsL="2"></smartform:Layout>
+		</smartform:layout>
+		<smartform:customToolbar>
+			<OverflowToolbar  id="smartFormToolbar" visible="{extensionModel>/SmartForm/editable}" design="Transparent">
+				<ToolbarSpacer id="ToolbarSpacer"/>
+				<Button id="btnEdit" text="{i18n>btnEdit}" visible="{= ${auditScopeView>/bFormDisplay} &amp;&amp; ${extensionModel>/Scope/editable} }" press="onEditFormPress" tooltip="{i18n>tolEdit}"></Button>
+				<Button id="btnSave" text="{i18n>btnSave}" visible="{= (!${auditScopeView>/bFormDisplay}) &amp;&amp; ${extensionModel>/Scope/editable} }" press="onSaveBtnPress" tooltip="{i18n>tolSave}"></Button>
+				<Button id="btnCancel" text="{i18n>btnCancel}" visible="{= (!${auditScopeView>/bFormDisplay}) &amp;&amp; ${extensionModel>/Scope/editable} }" press="onCancelBtnPress" tooltip="{i18n>tolCancel}"></Button>
+			</OverflowToolbar >
+		</smartform:customToolbar>
+		<smartform:Group id="scope">
+			<smartform:GroupElement id="scopeGroupElement">
+				<richtexteditor:RichTextEditor value="{Scope}" id="auditScope" width="100%" required="true"
+					editable="{= (!${auditScopeView>/bFormDisplay}) &amp;&amp; ${extensionModel>/Scope/editable} }">
+				</richtexteditor:RichTextEditor>
+			</smartform:GroupElement>
+		</smartform:Group>
+	</smartform:SmartForm>
+</mvc:View>
