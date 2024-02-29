@@ -1,4 +1,4 @@
-specVersion: "2.6"
+specVersion: "3.0"
 metadata:
   name: acs.aud.ext
 type: application
@@ -8,7 +8,7 @@ resources:
       webapp: webapp
 framework:
   name: SAPUI5
-  version: 1.98.0
+  version: 1.114.13
   libraries:
     - name: sap.ui.core
     - name: sap.m
