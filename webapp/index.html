@@ -132,6 +132,13 @@
 						description: "Action",
 						title: "Action-updateAuditFollowUp"
 					},
+					"Action-analyze": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.action.analyze",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_anaact/",
+						description: "ActionPlans",
+						title: "Action-analyze"
+					},
 					"AuditableItem-display": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditableitem.display",
 						applicationType: "URL",
@@ -216,6 +223,13 @@
 						description: "AuditEngagement",
 						title: "AuditEngagement-execute"
 					},
+                    "AuditEngagement-initiate": {
+                        additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.initiate",
+                        applicationType: "URL",
+                        url: "/sap/bc/ui5_ui5/sap/grcaud_audinit/",
+                        description: "AuditEngagement",
+                        title: "AuditEngagement-initiate"
+                    },				
 					"AuditEngagement-prepare": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.prepare",
 						applicationType: "URL",
@@ -243,6 +257,13 @@
 						url: "/sap/bc/ui5_ui5/sap/grcaud_audhist/",
 						description: "AuditEngagement",
 						title: "AuditEngagement-trackOVP"
+					},
+					"AuditEngagement-analyze": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.audit.analyze",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_anaaud/",
+						description: "AuditEngagement",
+						title: "AuditEngagement-analyze"
 					},
 					"AuditOrganization-displayFactSheet": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.org",
@@ -286,12 +307,33 @@
 						description: "AuditOverviewPage",
 						title: "AuditOverviewPage-displayManagement"
 					},
+					"AuditPlan-consolidate": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan.group",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_plgrp/",
+						description: "AuditPlan",
+						title: "AuditPlan-consolidate"
+					},
 					"AuditPlan-display": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
 						applicationType: "URL",
 						url: "/sap/bc/ui5_ui5/sap/grcaud_audplan/",
 						description: "AuditPlan",
 						title: "AuditPlan-display"
+					},
+					"AuditPlan-create": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audplan/",
+						description: "AuditPlan",
+						title: "AuditPlan-create"
+					},
+					"AuditPlan-copy": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_audplan/",
+						description: "AuditPlan",
+						title: "AuditPlan-copy"
 					},
 					"AuditPlan-manage": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.auditplan",
@@ -650,6 +692,13 @@
 						description: "DocumentWorkingPaper",
 						title: "DocumentWorkingPaper-track"
 					},
+					"Finding-analyze": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.analyze",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_anafind/",
+						description: "Analyze Audit Findings",
+						title: "Finding-analyze"
+					},	
 					"Finding-create": {
 						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.finding.execute",
 						applicationType: "URL",
@@ -916,12 +965,19 @@
 						description: "TestProcedure",
 						title: "TestProcedure-track"
 					},
-					"AuditEngagement-initiate": {
-						additionalInformation: "SAPUI5.Component=zaud.audit.initiate.cust",
+					"AuditBusinessProcess-manage": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.process",
 						applicationType: "URL",
-						url: "/ext-resources/zaud.audit.initiate.cust/webapp/",
-						description: "AuditEngagement",
-						title: "Initiate Audits - Customized"
+						url: "/sap/bc/ui5_ui5/sap/grcaud_prc/",
+						description: "AuditBusinessProcess",
+						title: "AuditBusinessProcess-manage"
+					},
+					"AuditBusinessProcess-displayVersion": {
+						additionalInformation: "SAPUI5.Component=sap.grc.acs.aud.process",
+						applicationType: "URL",
+						url: "/sap/bc/ui5_ui5/sap/grcaud_prc/",
+						description: "AuditBusinessProcess",
+						title: "AuditBusinessProcess-displayVersion"
 					}
 				}
 			};
