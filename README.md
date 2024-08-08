@@ -10,7 +10,7 @@ Audit Management launchpad for custom development. Some technology you may want 
 
 ### Prerequisites
 
-- Node.js Version 16 or later
+- [Node.js](https://nodejs.org/) Versions v20.11.0, v22.0.0, or higher
 
 ### Setup
 

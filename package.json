@@ -7,9 +7,9 @@
 		"start": "ui5 serve --config ui5.yaml --port 1080 --open index.html"
 	},
 	"devDependencies": {
-		"@ui5/cli": "^3.0.0",
-		"ui5-middleware-servestatic": "^3.0.2",
-		"ui5-middleware-simpleproxy": "^3.2.14"
+		"@ui5/cli": "^4.0.0",
+		"ui5-middleware-servestatic": "^3.1.1",
+		"ui5-middleware-simpleproxy": "^3.2.18"
 	},
 	"ui5": {
 		"dependencies": [
