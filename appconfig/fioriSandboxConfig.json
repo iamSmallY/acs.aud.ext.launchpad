@@ -1,0 +1,413 @@
+{
+    "services": {
+        "LaunchPage": {
+            "adapter": {
+                "config": {
+                    "groups": [
+                        {
+                            "id": "Audit Follow-up",
+                            "title": "Audit - Follow-up",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles": [
+                                {
+                                    "id": "F0001",
+                                    "title": "Track Open Findings",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Track Open Findings",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F0001",
+                                        "targetURL": "#Finding-trackAuditFollowUp"
+                                    }
+                                },
+                                {
+                                    "id": "F2372",
+                                    "title": "Track Open Action Plans",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Track Open Action Plans",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2372",
+                                        "targetURL": "#Action-trackAuditFollowUp"
+                                    }
+                                },
+                                {
+                                    "id": "F2372",
+                                    "title": "My Findings",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "My Findings",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2372",
+                                        "targetURL": "#Finding-myFinding"
+                                    }
+                                },
+                                {
+                                    "id": "F2697",
+                                    "title": "My Action Plans",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "My Action Plans",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2697",
+                                        "targetURL": "#Action-myAction"
+                                    }
+                                },
+                                {
+                                    "id": "F2377",
+                                    "title": "Display Findings",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Display Findings",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2377",
+                                        "targetURL": "#Finding-displayHistorical"
+                                    }
+                                },
+                                {
+                                    "id": "F2376",
+                                    "title": "Display Action Plans",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Display Action Plans",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2376",
+                                        "targetURL": "#Action-displayHistorical"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Audit Master Data",
+                            "title": "Audit - Master Data",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles":[
+                                {
+                                    "id": "F6490",
+                                    "title": "Organizations",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Organizations",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6490",
+                                        "targetURL": "#AuditOrganization-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F6491",
+                                    "title": "Dimensions",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Dimensions",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6491",
+                                        "targetURL": "#AuditDimension-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F7282",
+                                    "title": "Business Processes",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Business Processes",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F7282",
+                                        "targetURL": "#AuditBusinessProcess-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F5246",
+                                    "title": "Risk Register",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Risk Register",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F5246",
+                                        "targetURL": "#Risk-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F5245",
+                                    "title": "Control",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Control",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F5245",
+                                        "targetURL": "#InternalControl-manage"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Audit Audit Planning ",
+                            "title": "Audit - Audit Planning ",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles":[
+                                {
+                                    "id": "F5244",
+                                    "title": "Audit Universe",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Audit Universe",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F5244",
+                                        "targetURL": "#AuditableItem-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F2697",
+                                    "title": "Manage Audit Plans",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Manage Audit Plans",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F2697",
+                                        "targetURL": "#AuditPlan-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F7283",
+                                    "title": "Consolidate Audit Plans",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Consolidate Audit Plans",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F7283",
+                                        "targetURL": "#AuditPlan-consolidate"
+                                    }
+                                },
+                                {
+                                    "id": "F3713",
+                                    "title": "Initiate Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Initiate Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3713",
+                                        "targetURL": "#AuditEngagement-initiate"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Audit Resource Management ",
+                            "title": "Audit - Resource Management ",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles":[
+                                {
+                                    "id": "F6493",
+                                    "title": "Profile",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Profile",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6493",
+                                        "targetURL": "#AuditorProfile-my"
+                                    }
+                                },
+                                {
+                                    "id": "F6492",
+                                    "title": "Resource Management",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Resource Management",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6492",
+                                        "targetURL": "#AuditResource-manage"
+                                    }
+                                },
+                                {
+                                    "id": "F1945",
+                                    "title": "Record Time",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Record Time",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F1945",
+                                        "targetURL": "#BusinessUser-recordAuditTime"
+                                    }
+                                }                                
+                            ]
+                        },
+                        {
+                            "id": "Audit Audit Engagement ",
+                            "title": "Audit - Audit Engagement ",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles":[
+                                {
+                                    "id": "F3713",
+                                    "title": "Initiate Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Initiate Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3713",
+                                        "targetURL": "#AuditEngagement-initiate"
+                                    }
+                                },
+                                {
+                                    "id": "F3731",
+                                    "title": "Prepare Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Prepare Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3731",
+                                        "targetURL": "#AuditEngagement-prepare"
+                                    }
+                                },
+                                {
+                                    "id": "F3907",
+                                    "title": "Approve Audit Preparation",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Approve Audit Preparation",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3907",
+                                        "targetURL": "#AuditEngagement-approvePreparation"
+                                    }
+                                },
+                                {
+                                    "id": "F3774",
+                                    "title": "My Ongoing Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "My Ongoing Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3774",
+                                        "targetURL": "#AuditEngagement-execute"
+                                    }
+                                },
+                                {
+                                    "id": "F6495",
+                                    "title": "My Work Package",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "My Work Package",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6495",
+                                        "targetURL": "#AuditWorkPackage-my"
+                                    }
+                                },
+                                {
+                                    "id": "F6494",
+                                    "title": "Review Work Package",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Review Work Package",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F6494",
+                                        "targetURL": "#AuditWorkPackage-review"
+                                    }
+                                },
+                                {
+                                    "id": "F3777",
+                                    "title": "Approve Audit Reports",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Approve Audit Reports",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3777",
+                                        "targetURL": "#AuditEngagement-approveReport"
+                                    }
+                                },
+                                {
+                                    "id": "F3776",
+                                    "title": "Track Ongoing Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Track Ongoing Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3776",
+                                        "targetURL": "#AuditEngagement-track"
+                                    }
+                                },
+                                {
+                                    "id": "F3782",
+                                    "title": "Display Historical Audits",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Display Historical Audits",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3782",
+                                        "targetURL": "#AuditEngagement-displayHistorical"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "NavTargetResolution": {
+            "config": {
+                "enableClientSideTargetResolution": true
+            }
+        }
+    }    
+}
