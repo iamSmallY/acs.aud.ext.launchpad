@@ -1,0 +1,39 @@
+{
+    "services": {
+        "LaunchPage": {
+            "adapter": {
+                "config": {
+                    "groups": [
+                        {
+                            "id": "Extension",
+                            "title": "Extension",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles": [
+                                {
+                                    "id": "F3713",
+                                    "title": "Initiate Audits - Customized",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Initiate Audits - Customized",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F3713",
+                                        "targetURL": "#AuditEngagement-initiate"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "NavTargetResolution": {
+            "config": {
+                "enableClientSideTargetResolution": true
+            }
+        }
+    }    
+}
