@@ -38,3 +38,9 @@ server:
       configuration:
         rootPath: "ext-apps"
         debug: true
+    - name: ui5-middleware-servestatic
+      afterMiddleware: compression
+      mountPath: /appconfig
+      configuration:
+        rootPath: "appconfig/"
+        debug: true
