@@ -1,0 +1,40 @@
+@AbapCatalog.sqlViewName: 'ZGRCAUDCVAUDBORG'
+@ClientHandling.type: #CLIENT_DEPENDENT
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Audits by Orgs'
+@Metadata.ignorePropagatedAnnotations: true
+
+@UI.chart:[
+    {
+        qualifier:'ChartAuditCountByOrganization',
+        title:'Ongoing Audits by Organization',
+        chartType:#BAR,
+        dimensions:['OrgID'],
+        measures:['AuditCount'],
+        dimensionAttributes:[{dimension:'OrgID',role:#CATEGORY}],
+        measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    }
+]
+define view ZGRCAUD_CV_AuditByOrgAna
+  as select from GRCAUD_CV_OrganizationByAudit
+    inner join   GRCAUD_CV_TrackOngoingAudit on GRCAUD_CV_OrganizationByAudit.DBKey = GRCAUD_CV_TrackOngoingAudit.DBKey
+{
+  key GRCAUD_CV_OrganizationByAudit.DBKey as AuditKey,
+  key GRCAUD_CV_OrganizationByAudit.OrgKey,
+      @ObjectModel.text.element: [ 'OrgName' ]
+      GRCAUD_CV_OrganizationByAudit.OrgID,
+      GRCAUD_CV_OrganizationByAudit.OrgName,
+      @AnalyticsDetails.query.axis: #COLUMNS
+      @AnalyticsDetails: {
+      exceptionAggregationSteps: [
+          { exceptionAggregationBehavior: #COUNT,
+            exceptionAggregationElements: [ 'AuditKey']  }
+        ]
+      }
+      @AnalyticsDetails.query.formula: '1'
+      @UI.dataPoint: {title: 'Audits'}
+      @DefaultAggregation: #COUNT
+      cast (0 as grcaud_ic_audit_count)   as AuditCount
+}

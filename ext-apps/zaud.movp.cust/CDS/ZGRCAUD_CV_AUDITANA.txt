@@ -1,0 +1,179 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.chart:[
+/****************************************************************************************
+ Default chart in the content area of the page
+ ****************************************************************************************/
+    {
+    qualifier:'ChartAuditCountByStatus',
+    title:'Audits By Status',
+    chartType:#DONUT,
+    dimensions:['AuditStatus'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditStatus',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditGroup',
+    title:'Audits By Audit Group',
+    chartType:#DONUT,
+    dimensions:['AuditGroup'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditGroup',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditType',
+    title:'Audits By Audit Type',
+    chartType:#DONUT,
+    dimensions:['AuditType'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditType',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditCategory',
+    title:'Audits By Audit Category',
+    chartType:#DONUT,
+    dimensions:['AuditCategory'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditCategory',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByINIYearQuarter',
+    title:'Initiated Audits by Year and Quarter',
+    chartType:#LINE,
+    dimensions:['AuditINIYearQuarter'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditINIYearQuarter',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditLead',
+    title:'Audits by Audit Lead',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditLead'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditLead',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditManager',
+    title:'Audits by Audit Manager',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditManager'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditManager',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditCountry',
+    title:'Audits by Country/Region',
+    chartType:#BAR,
+    dimensions:['AuditCountry'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditCountry',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditPhaseAndAuditGroup',
+    title:'Audits by Audit Phase and Audit Group',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditPhase','AuditGroup'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditPhase',role:#CATEGORY},{dimension:'AuditGroup',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditPhaseAndAuditType',
+    title:'Audits by Audit Phase and Audit Type',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditPhase','AuditType'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditPhase',role:#CATEGORY},{dimension:'AuditType',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditPhaseAndAuditCategory',
+    title:'Audits by Audit Phase and Audit Category',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditPhase','AuditCategory'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditPhase',role:#CATEGORY},{dimension:'AuditCategory',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditPhaseAndAuditManager',
+    title:'Audits by Audit Phase and Audit Manager',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditPhase','AuditManager'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditPhase',role:#CATEGORY},{dimension:'AuditManager',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditPhaseAndAuditLead',
+    title:'Audits by Audit Phase and Audit Lead',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditPhase','AuditLead'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditPhase',role:#CATEGORY},{dimension:'AuditLead',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+
+    {
+    qualifier:'ChartDisAuditCountByAuditDARYearQuarterAndAuditGroup',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditDARYearQuarter','AuditGroup'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditDARYearQuarter',role:#CATEGORY},{dimension:'AuditGroup',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartDisAuditCountByAuditDARYearQuarterAndAuditFinalReportRating',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditDARYearQuarter','AuditFinalReportRating'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditDARYearQuarter',role:#CATEGORY},{dimension:'AuditFinalReportRating',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartDisAuditCountByAuditDARYearQuarterAndAuditFinalReportCategory',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditDARYearQuarter','AuditFinalReportCategory'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditDARYearQuarter',role:#CATEGORY},{dimension:'AuditFinalReportCategory',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartDisAuditCountByAuditDARYearQuarterAndAuditLead',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditDARYearQuarter','AuditLead'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditDARYearQuarter',role:#CATEGORY},{dimension:'AuditLead',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartDisAuditCountByAuditDARYearQuarterAndAuditManager',
+    chartType:#COLUMN_STACKED,
+    dimensions:['AuditDARYearQuarter','AuditManager'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditDARYearQuarter',role:#CATEGORY},{dimension:'AuditManager',role:#SERIES}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    },
+    {
+    qualifier:'ChartAuditCountByAuditGroup2',
+    title:'Overdue Audits By Audit Group',
+    chartType:#COLUMN,
+    dimensions:['AuditGroup'],
+    measures:['AuditCount'],
+    dimensionAttributes:[{dimension:'AuditGroup',role:#CATEGORY}],
+    measureAttributes:[{measure:'AuditCount',role:#AXIS_1,asDataPoint:true}]
+    }
+]
+annotate entity GRCAUD_CV_AuditAna with
+{
+
+
+}
