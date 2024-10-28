@@ -23,6 +23,19 @@
                                         "icon": "sap-icon://Fiori2/F3713",
                                         "targetURL": "#AuditEngagement-initiate"
                                     }
+                                },
+                                {
+                                    "id": "F5243",
+                                    "title": "Audit Management Overview - Customized",
+                                    "size": "1x1",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "chipId": "catalogTile_0001",
+                                        "title": "Audit Management Overview - Customized",
+                                        "info": "",
+                                        "icon": "sap-icon://Fiori2/F5243",
+                                        "targetURL": "#AuditOverviewPage-displayManagement"
+                                    }
                                 }
                             ]
                         }
