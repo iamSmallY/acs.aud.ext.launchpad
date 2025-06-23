@@ -29,4 +29,4 @@ This document illustrates how to add customizing cards in Audit Management Overv
 5. Then add a new custom card `custom02` in [manifest.json](https://github.tools.sap/GRC-Audit-Management/acs.aud.ext.launchpad/blob/main/ext-apps/zaud.movp.cust/webapp/manifest.json), consuming the chart added in `@UI.chart` annotation.
 6. The screenshot of this case:
 
-![Screenshot](https://github.tools.sap/GRC-Audit-Management/acs.aud.ext.launchpad/blob/main/ext-apps/zaud.movp.cust/Screenshots/Case02.png)
+![Screenshot](https://github.com/iamSmallY/acs.aud.ext.launchpad/blob/master/ext-apps/zaud.movp.cust/Screenshots/Case02.png?raw=true)
